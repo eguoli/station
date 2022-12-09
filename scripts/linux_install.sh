@@ -70,6 +70,7 @@ set_local_dns () {
 
 generate_certificate () {
     green "INFO" "Installing MKcert and generating HTTPS certificates:"
+    sudo apt install libnss3-tools
     curl -sL $MKCERT_URL -o mkcert
     chmod +x mkcert
     ./mkcert -install
